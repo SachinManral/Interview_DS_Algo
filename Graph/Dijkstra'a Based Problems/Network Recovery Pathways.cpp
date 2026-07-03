@@ -56,7 +56,6 @@ public:
 
 	int findMaxPathScore(vector<vector<int>>& edges, vector<bool>& online, ll k) {
 		int n = online.size();
-		vector<vector<pair<int, int>>> g(n);
         unordered_map<int, vector<vector<int>>> adj;
 
 		int l = INT_MAX, r = 0;
