@@ -100,8 +100,13 @@
 				</td>
 			</tr>
 			<tr>
-        			<td>
+        		<td>
 					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Graph/Dijkstra'a%20Based%20Problems/Find%20a%20Safe%20Walk%20Through%20a%20Grid.cpp"> Find a Safe Walk Through a Grid (Leetcode - 3286)</a>
+				</td>
+			</tr>
+			<tr>
+        		<td>
+					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Graph/Dijkstra'a%20Based%20Problems/Network%20Recovery%20Pathways.cpp"> Network Recovery Pathways (Leetcode - 3620)</a>
 				</td>
 			</tr>
 		</tbody>
