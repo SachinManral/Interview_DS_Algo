@@ -38,15 +38,15 @@ public:
                 continue;
 
             for(auto &vec : adj[node]) {
-                int adjNode = vec[0];
-                int dist    = vec[1];
+                int adjNode  = vec[0];
+                int edgeCost = vec[1];
 
-                if(dist < mid) 
+                if(edgeCost < mid)  //because I want the score to be mid
                     continue;
 
-                if(d + dist < result[adjNode]) {
-                    result[adjNode] = d + dist;
-                    pq.push({d + dist, adjNode});
+                if(d + edgeCost < result[adjNode]) {
+                    result[adjNode] = d + edgeCost;
+                    pq.push({d + edgeCost, adjNode});
                 }
             }
         }
@@ -123,14 +123,14 @@ class Solution {
 
             for (int[] vec : adj.getOrDefault(node, Collections.emptyList())) {
                 int adjNode = vec[0];
-                int dist    = vec[1];
+                int edgeCost    = vec[1];
 
-                if (dist < mid)
+                if (edgeCost < mid) //because I want the score to be mid
                     continue;
 
-                if (d + dist < result[adjNode]) {
-                    result[adjNode] = d + dist;
-                    pq.offer(new long[] {d + dist, adjNode});
+                if (d + edgeCost < result[adjNode]) {
+                    result[adjNode] = d + edgeCost;
+                    pq.offer(new long[] {d + edgeCost, adjNode});
                 }
             }
         }
