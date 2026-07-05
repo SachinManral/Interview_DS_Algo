@@ -25,7 +25,7 @@ class Solution {
         return i >= 0 && i < n && j >= 0 && j < n && board[i][j] != 'X';
     }
 
-    pair<int, int> helper(int i, int j, vector<string>& board) {
+    pair<int, int> solve(int i, int j, vector<string>& board) {
         if (board[i][j] == 'E') 
             return {0, 1};   // reached end - no more coins, but found one path that reaches end - {0, 1}
         if (board[i][j] == 'X') 
@@ -40,21 +40,21 @@ class Solution {
         char ch = board[i][j];
 
         if (isValid(i - 1, j, board)) {
-            auto [score, paths] = helper(i - 1, j, board);
+            auto [score, paths] = solve(i - 1, j, board);
             upScore = score;
             upPaths = paths;
             if (upPaths > 0)
                 upScore += getIntFromChar(ch);
         }
         if (isValid(i, j - 1, board)) {                 // move left
-            auto [score, paths] = helper(i, j - 1, board);
+            auto [score, paths] = solve(i, j - 1, board);
             leftScore = score;
             leftPaths = paths;
             if (leftPaths > 0)
                 leftScore += getIntFromChar(ch);
         }
         if (isValid(i - 1, j - 1, board)) {             // move up-left (diagonal)
-            auto [score, paths] = helper(i - 1, j - 1, board);
+            auto [score, paths] = solve(i - 1, j - 1, board);
             diagScore = score;
             diagPaths = paths;
             if (diagPaths > 0)
@@ -97,7 +97,7 @@ public:
         
         t.assign(n, vector<pair<int, int>>(n, {-1, -1}));
 
-        auto result = helper(n - 1, n - 1, board);
+        auto result = solve(n - 1, n - 1, board);
         return {result.first, result.second};
     }
 };
@@ -143,21 +143,21 @@ public:
                 char ch = board[i][j];
 
                 if (isValid(i - 1, j, board)) {              // move up
-                    auto [score, paths] = t[i - 1][j];       //helper(i-1, j)
+                    auto [score, paths] = t[i - 1][j];       //solve(i-1, j)
                     upScore = score;
                     upPaths = paths;
                     if (upPaths > 0)
                         upScore += getIntFromChar(ch);
                 }
                 if (isValid(i, j - 1, board)) {              // move left
-                    auto [score, paths] = t[i][j - 1];       //helper(i, j-1)
+                    auto [score, paths] = t[i][j - 1];       //solve(i, j-1)
                     leftScore = score;
                     leftPaths = paths;
                     if (leftPaths > 0)
                         leftScore += getIntFromChar(ch);
                 }
                 if (isValid(i - 1, j - 1, board)) {          // move up-left
-                    auto [score, paths] = t[i - 1][j - 1];   //helper(i-1, j-1)
+                    auto [score, paths] = t[i - 1][j - 1];   //solve(i-1, j-1)
                     diagScore = score;
                     diagPaths = paths;
                     if (diagPaths > 0)
@@ -194,7 +194,7 @@ public:
             }
         }
 
-        auto result = t[n - 1][n - 1]; //helper(n-1, n-1)
+        auto result = t[n - 1][n - 1]; //solve(n-1, n-1)
         return {result.first, result.second};
     }
 };
@@ -218,7 +218,7 @@ class Solution {
         return i >= 0 && i < n && j >= 0 && j < n && board.get(i).charAt(j) != 'X';
     }
 
-    private int[] helper(int i, int j, List<String> board) {
+    private int[] solve(int i, int j, List<String> board) {
         char here = board.get(i).charAt(j);
 
         if (here == 'E')
@@ -235,21 +235,21 @@ class Solution {
         char ch = here;
 
         if (isValid(i - 1, j, board)) {
-            int[] r = helper(i - 1, j, board);
+            int[] r = solve(i - 1, j, board);
             upScore = r[0];
             upPaths = r[1];
             if (upPaths > 0)
                 upScore += getIntFromChar(ch);
         }
         if (isValid(i, j - 1, board)) {
-            int[] r = helper(i, j - 1, board);
+            int[] r = solve(i, j - 1, board);
             leftScore = r[0];
             leftPaths = r[1];
             if (leftPaths > 0)
                 leftScore += getIntFromChar(ch);
         }
         if (isValid(i - 1, j - 1, board)) {
-            int[] r = helper(i - 1, j - 1, board);
+            int[] r = solve(i - 1, j - 1, board);
             diagScore = r[0];
             diagPaths = r[1];
             if (diagPaths > 0)
@@ -293,7 +293,7 @@ class Solution {
         tPaths = new int[n][n];
         for (int[] row : tScore) Arrays.fill(row, -1);
 
-        int[] result = helper(n - 1, n - 1, board);
+        int[] result = solve(n - 1, n - 1, board);
         return new int[]{result[0], result[1]};
     }
 }
