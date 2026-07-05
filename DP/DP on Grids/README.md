@@ -65,8 +65,13 @@
 				</td>
 			</tr>
 			<tr>
-         			<td>
+         		<td>
 					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/DP/DP%20on%20Grids/Maximum%20Path%20Score%20in%20a%20Grid.cpp"> Maximum Path Score in a Grid (Leetcode - 3742)</a>
+				</td>
+			</tr>
+			<tr>
+         		<td>
+					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/DP/DP%20on%20Grids/Number%20of%20Paths%20with%20Max%20Score.cpp"> Number of Paths with Max Score (Leetcode - 1301)</a>
 				</td>
 			</tr>
 		</tbody>
