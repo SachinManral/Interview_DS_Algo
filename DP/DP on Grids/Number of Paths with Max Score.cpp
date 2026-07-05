@@ -37,28 +37,28 @@ class Solution {
         int upScore = 0,   upPaths = 0;
         int leftScore = 0, leftPaths = 0;
         int diagScore = 0, diagPaths = 0;
-        char cell = board[i][j];
+        char ch = board[i][j];
 
         if (isValid(i - 1, j, board)) {
             auto [score, paths] = helper(i - 1, j, board);
             upScore = score;
             upPaths = paths;
             if (upPaths > 0)
-                upScore += getIntFromChar(cell);
+                upScore += getIntFromChar(ch);
         }
         if (isValid(i, j - 1, board)) {                 // move left
             auto [score, paths] = helper(i, j - 1, board);
             leftScore = score;
             leftPaths = paths;
             if (leftPaths > 0)
-                leftScore += getIntFromChar(cell);
+                leftScore += getIntFromChar(ch);
         }
         if (isValid(i - 1, j - 1, board)) {             // move up-left (diagonal)
             auto [score, paths] = helper(i - 1, j - 1, board);
             diagScore = score;
             diagPaths = paths;
             if (diagPaths > 0)
-                diagScore += getIntFromChar(cell);
+                diagScore += getIntFromChar(ch);
         }
 
         int bestScore, bestPaths;
@@ -140,28 +140,28 @@ public:
                 int upScore = 0,   upPaths = 0;
                 int leftScore = 0, leftPaths = 0;
                 int diagScore = 0, diagPaths = 0;
-                char cell = board[i][j];
+                char ch = board[i][j];
 
                 if (isValid(i - 1, j, board)) {              // move up
                     auto [score, paths] = t[i - 1][j];       //helper(i-1, j)
                     upScore = score;
                     upPaths = paths;
                     if (upPaths > 0)
-                        upScore += getIntFromChar(cell);
+                        upScore += getIntFromChar(ch);
                 }
                 if (isValid(i, j - 1, board)) {              // move left
                     auto [score, paths] = t[i][j - 1];       //helper(i, j-1)
                     leftScore = score;
                     leftPaths = paths;
                     if (leftPaths > 0)
-                        leftScore += getIntFromChar(cell);
+                        leftScore += getIntFromChar(ch);
                 }
                 if (isValid(i - 1, j - 1, board)) {          // move up-left
                     auto [score, paths] = t[i - 1][j - 1];   //helper(i-1, j-1)
                     diagScore = score;
                     diagPaths = paths;
                     if (diagPaths > 0)
-                        diagScore += getIntFromChar(cell);
+                        diagScore += getIntFromChar(ch);
                 }
 
                 int bestScore, bestPaths;
@@ -232,28 +232,28 @@ class Solution {
         int upScore = 0,   upPaths = 0;
         int leftScore = 0, leftPaths = 0;
         int diagScore = 0, diagPaths = 0;
-        char cell = here;
+        char ch = here;
 
         if (isValid(i - 1, j, board)) {
             int[] r = helper(i - 1, j, board);
             upScore = r[0];
             upPaths = r[1];
             if (upPaths > 0)
-                upScore += getIntFromChar(cell);
+                upScore += getIntFromChar(ch);
         }
         if (isValid(i, j - 1, board)) {
             int[] r = helper(i, j - 1, board);
             leftScore = r[0];
             leftPaths = r[1];
             if (leftPaths > 0)
-                leftScore += getIntFromChar(cell);
+                leftScore += getIntFromChar(ch);
         }
         if (isValid(i - 1, j - 1, board)) {
             int[] r = helper(i - 1, j - 1, board);
             diagScore = r[0];
             diagPaths = r[1];
             if (diagPaths > 0)
-                diagScore += getIntFromChar(cell);
+                diagScore += getIntFromChar(ch);
         }
 
         int bestScore, bestPaths;
@@ -325,10 +325,10 @@ class Solution {
 
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < n; ++j) {
-                char cell = board.get(i).charAt(j);
+                char ch = board.get(i).charAt(j);
 
-                if (cell == 'E') continue;
-                if (cell == 'X') continue;
+                if (ch == 'E') continue;
+                if (ch == 'X') continue;
 
                 int upScore = 0,   upPaths = 0;
                 int leftScore = 0, leftPaths = 0;
@@ -338,19 +338,19 @@ class Solution {
                     upScore = tScore[i - 1][j];
                     upPaths = tPaths[i - 1][j];
                     if (upPaths > 0)
-                        upScore += getIntFromChar(cell);
+                        upScore += getIntFromChar(ch);
                 }
                 if (isValid(i, j - 1, board)) {              // move left
                     leftScore = tScore[i][j - 1];
                     leftPaths = tPaths[i][j - 1];
                     if (leftPaths > 0)
-                        leftScore += getIntFromChar(cell);
+                        leftScore += getIntFromChar(ch);
                 }
                 if (isValid(i - 1, j - 1, board)) {          // move up-left
                     diagScore = tScore[i - 1][j - 1];
                     diagPaths = tPaths[i - 1][j - 1];
                     if (diagPaths > 0)
-                        diagScore += getIntFromChar(cell);
+                        diagScore += getIntFromChar(ch);
                 }
 
                 int bestScore, bestPaths;
