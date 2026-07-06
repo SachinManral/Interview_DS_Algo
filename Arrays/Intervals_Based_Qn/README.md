@@ -46,7 +46,7 @@
 			</tr>
 			<tr>
         			<td>
-					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Arrays/Intervals_Based_Qn/Remove%20Covered%20Intervals">Remove Covered Intervals (Leetcode-1288)</a>
+					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Arrays/Intervals_Based_Qn/Remove%20Covered%20Intervals.cpp">Remove Covered Intervals (Leetcode-1288)</a>
 				</td>
 			</tr>
 			<tr>
