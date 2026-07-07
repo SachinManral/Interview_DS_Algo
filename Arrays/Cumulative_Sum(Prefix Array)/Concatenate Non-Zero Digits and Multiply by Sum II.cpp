@@ -18,7 +18,7 @@ public:
     vector<int> sumAndMultiply(string s, vector<vector<int>>& queries) {
         int n = s.length();
 
-        vector<int>       nonZeroCount(n, 0);    // non-zero digits count in s[0..i]
+        vector<int> nonZeroCount(n, 0);    // non-zero digits count in s[0..i]
         vector<ll> numberUpTo(n, 0);      // number formed from non-zero digits in s[0..i]
         vector<ll> digitSumUpTo(n, 0);    // digit sum of s[0..i]
         vector<ll> pow10(n + 1, 0);  // 10^i
