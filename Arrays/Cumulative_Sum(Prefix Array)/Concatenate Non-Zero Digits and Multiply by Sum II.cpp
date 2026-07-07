@@ -58,7 +58,6 @@ public:
 
             int startCount = (l == 0) ? 0 : nonZeroCount[l - 1];
             ll numBefore   = (l == 0) ? 0 : numberUpTo[l - 1];
-            ll sumBefore   = (l == 0) ? 0 : digitSumUpTo[l - 1];
 
             int endCount = nonZeroCount[r];
             int subStrLen = endCount - startCount;
@@ -69,7 +68,7 @@ public:
             }
 
             ll x   = (numberUpTo[r] - (numBefore * pow10[subStrLen] % MOD) + MOD) % MOD;
-            ll sum = digitSumUpTo[r] - sumBefore;
+            ll sum = digitSumUpTo[r] - ((l == 0) ? 0 : digitSumUpTo[l - 1]);
 
             result[i] = (int)((x * sum) % MOD);
         }
@@ -130,7 +129,6 @@ class Solution {
 
             int  startCount = (l == 0) ? 0 : nonZeroCount[l - 1];
             long numBefore  = (l == 0) ? 0 : numberUpTo[l - 1];
-            long sumBefore  = (l == 0) ? 0 : digitSumUpTo[l - 1];
 
             int endCount  = nonZeroCount[r];
             int subStrLen = endCount - startCount;
@@ -141,7 +139,7 @@ class Solution {
             }
 
             long x   = (numberUpTo[r] - (numBefore * pow10[subStrLen] % MOD) + MOD) % MOD;
-            long sum = digitSumUpTo[r] - sumBefore;
+            long sum = digitSumUpTo[r] - (l == 0) ? 0 : digitSumUpTo[l - 1];
 
             result[i] = (int) ((x * sum) % MOD);
         }
