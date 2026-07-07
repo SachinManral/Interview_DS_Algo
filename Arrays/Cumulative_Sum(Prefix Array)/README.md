@@ -144,5 +144,10 @@
 					  <a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Arrays/Cumulative_Sum(Prefix%20Array)/Count%20Subarrays%20With%20Majority%20Element%20I%20&%20II.cpp"> Count Subarrays With Majority Element I & II (Leetcode - 3737 & 3739)</a>
 				  	</td>
       			</tr>
+				<tr>
+          			 <td>
+					  <a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Arrays/Cumulative_Sum(Prefix%20Array)/Concatenate%20Non-Zero%20Digits%20and%20Multiply%20by%20Sum%20II.cpp"> Concatenate Non-Zero Digits and Multiply by Sum II (Leetcode - 3756)</a>
+				  	</td>
+      			</tr>
 		</tbody>
 </table>
