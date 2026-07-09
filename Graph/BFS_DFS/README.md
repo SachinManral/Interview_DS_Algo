@@ -159,5 +159,10 @@
 					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Graph/BFS_DFS/Minimum%20Jumps%20to%20Reach%20End%20via%20Prime%20Teleportation.cpp"> Minimum Jumps to Reach End via Prime Teleportation (Leetcode - 3629)</a>
 				</td>
 			</tr>
+			<tr>
+        			<td>
+					<a href="https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/Graph/BFS_DFS/Path%20Existence%20Queries%20in%20a%20Graph%20I.cpp"> Path Existence Queries in a Graph I (Leetcode - 3532)</a>
+				</td>
+			</tr>
 		</tbody>
 </table>
