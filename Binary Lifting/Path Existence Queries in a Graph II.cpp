@@ -1,6 +1,6 @@
 /*     Scroll below to see JAVA code as well    */
 /*
-    MY YOUTUBE VIDEO ON THIS Qn : 
+    MY YOUTUBE VIDEO ON THIS Qn : https://www.youtube.com/watch?v=QL8ZNyBOzp0
     Company Tags                : Will update later
     Leetcode Link               : https://leetcode.com/problems/path-existence-queries-in-a-graph-ii/
 */
