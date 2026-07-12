@@ -16,7 +16,7 @@
  <li> You can join this group on LinkedIn - <a href="https://www.linkedin.com/groups/12559380/">LinkedIn Page : codestorywithMIK</a></li>
 </ul>
 Latest Update⏰  -  
-<em>It helped me to crack interviews of <strong>"Microsoft", "Tower Research" and "Tokopedia"</strong>. I hope to add more to this list later 🙂</em>
+<em>It helped me to crack interviews of <strong>"Microsoft", "Tower Research", "Tokopedia" and "Expedia" </strong>. I hope to add more to this list later 🙂</em>
 
 ![](https://komarev.com/ghpvc/?username=MAZHARMIK)
 
