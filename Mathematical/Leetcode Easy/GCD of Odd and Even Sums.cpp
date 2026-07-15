@@ -1,6 +1,6 @@
 /*    Scroll below to see JAVA code also    */
 /*
-    MY YOUTUBE VIDEO ON THIS Qn  : 
+    MY YOUTUBE VIDEO ON THIS Qn  : https://www.youtube.com/watch?v=Gz-LzeUDzg4
     Company Tags                 : Will update later
     Leetcode Link                : https://leetcode.com/problems/gcd-of-odd-and-even-sums
 */
